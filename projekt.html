@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Love Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffdde1;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #e63950;
+        }
+        .love-message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ff4d6d;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .cat-img {
+            width: 500px;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="showLove()">Click Me 💖</button>
+    <img src="cat.jpg" alt="Ginger Cat" class="cat-img" id="cat">
+    <div class="love-message" id="message">I LOVE YOU! 💕</div>
+
+    <script>
+        function showLove() {
+            document.getElementById("message").style.opacity = "1";
+            document.getElementById("cat").style.display = "block";
+        }
+    </script>
+</body>
+</html>
